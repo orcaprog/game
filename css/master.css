@@ -1,5 +1,5 @@
 :root{
-    --dark-color : #19283f;
+    --dark-color : #040e1b;
     --green-color: #33d1cc;
     --red-color:#ff3150;
     --yallow-color :#ffc400;
@@ -34,3 +34,19 @@
   ::-webkit-scrollbar-thumb:hover {
     background-color: var(--blue-alt-color);
   }
+  .page {
+    height: 100vh;
+  }
+  .sidebar {
+    background-color: var(--dark-color);
+  }
+  .sidebar a {
+    font-size: 14px;
+    color:  white;
+      }
+
+/* START IMAGE LOGO */
+.sidebar img {
+  width: 150px;
+}
+/* START IMAGE LOGO */
