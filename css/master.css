@@ -141,21 +141,21 @@ header .icons img {
   grid-template-columns: repeat(4,1fr);
   grid-template-rows: repeat(2,400px);
   grid-template-areas: "welcome welcome box2 box2 "
-                        "box3 box3 box3 box3"
-                        "box4 box4 box4 box4";
+  "box3 box3 box3 box3"
+  "box4 box4 box4 box4";
 }
 
 
 @media (max-width: 992px) {
   .wrapper {
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(2,200px);
+    grid-template-rows: repeat(2,300px);
     grid-template-areas: "welcome"
-                        "box2"
-                        "box3"
-                        "box4";
+    "box2"
+    "box3"
+    "box4";
   }
-  .wrapper .box1 p {
+  .wrapper .box2 p {
     font-size: 20px;
   }
 }
@@ -163,24 +163,26 @@ header .icons img {
 .box1 {
   grid-area: welcome;
   background: linear-gradient(180deg, rgba(13,169,233,1) 0%, rgba(111,50,255,1) 95%);
-
   flex-wrap: wrap;
   overflow: hidden;
   box-shadow: 0 0 10px black;
 }
-.box1 p {
+.box1 p,
+.box2 p {
   color: white;
   font-weight: bold;
   font-size: 40px;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
 .box2 {
   grid-area: box2;
   background-image: url("/image/molchi.jpeg");
+  box-shadow: inset 0px -109px 98px 43px rgba(0,0,0,0.9);
   background-size: cover;
   background-repeat: no-repeat;
-  box-shadow: 0 0 10px black;
-
+  flex-direction: column;
+  
 }
 .box3 {
   grid-area: box3;
@@ -189,3 +191,34 @@ header .icons img {
   grid-area: box4;
 }
 /* END HEADER */
+
+
+
+
+
+/* THIS FOR PROFILE -------------------------------------------------------------------------------------------> */
+
+.pr-welcome h4{
+  color: white;
+  font-weight: bold;
+}
+.pr-welcome h4 span{
+
+  color: var(--gray-color);
+}
+.user-profile {
+  background-color: var(--op-dark-color);
+  grid-template-columns: repeat(4,1f);
+  grid-template-rows: 400px;
+  grid-template-areas: "profile profile   profile profile ";
+}
+.avatar-profile {
+  grid-area: profile;
+  
+}
+.avatar-profile  img {
+  width: 100px;
+  height: 100px;
+}
+
+/* <-------------------------------------------------------------------------------THIS FOR PROFILE  */
