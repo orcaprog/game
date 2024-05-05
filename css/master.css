@@ -9,6 +9,7 @@
     --violet-color:#6f32ff;
     --violet-color-op:#6f32ff52;
     --blue-color: #0da9e9;
+    --dark-yellow-color :#F59401;
 }
 * {
     box-sizing: border-box;
@@ -158,6 +159,13 @@ header .icons img {
   .wrapper .box2 p {
     font-size: 20px;
   }
+  .user-profile {
+    grid-template-columns: 1fr !important;
+    grid-template-rows: repeat(2,300px)!important;
+    grid-template-areas: "profile"
+                          "level"  !important;
+  }
+
 }
 
 .box1 {
@@ -207,18 +215,63 @@ header .icons img {
   color: var(--gray-color);
 }
 .user-profile {
-  background-color: var(--op-dark-color);
-  grid-template-columns: repeat(4,1f);
+  /* background-color: var(--op-dark-color); */
+  /* background-color: #151a1f68; */
+  background-image: url("/image/bg-d.png");
+  background-size: cover;
+
+  grid-template-columns: repeat(4,1fr) ;
   grid-template-rows: 400px;
-  grid-template-areas: "profile profile   profile profile ";
+  grid-template-areas: "profile   level  level level";
+  margin-top: 100px;
+  box-shadow: 0 0 10px black;
 }
 .avatar-profile {
   grid-area: profile;
   
 }
 .avatar-profile  img {
-  width: 100px;
-  height: 100px;
-}
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: solid 4px var( --dark-yellow-color);
+  box-shadow:0px 30px 74px 2px #00c2cb;
 
+}
+.pr-name ,
+.level-profile h4{
+  color: white;
+
+}
+.pr-name {
+  color: white;
+  border-bottom: solid 2px black;
+  width: 30%;
+  font-size: 20px;
+
+}
+.progress {
+  background-color: rgba(0, 0, 0, 0.328);
+  border: solid 1px rgba(0, 0, 0, 0.328);
+}
+.progress  span{
+  background-image: url("/image/bg-y.png");
+  background-size: contain;
+}
+.level-profile {
+  grid-area: level;
+}
+.level-profile {
+  height: 50%;
+  padding: 20px;
+  border-left: solid 4px  var(--dark-yellow-color);
+  box-shadow: 0 0 10px black;
+}
+/* .pos-lev {
+  display: none;
+  color: var(--dark-yellow-color);
+}
+.level-profile:hover .progress .pos-lev {
+display: block;
+} */
 /* <-------------------------------------------------------------------------------THIS FOR PROFILE  */
