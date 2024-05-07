@@ -61,12 +61,14 @@
   margin-bottom: 50px;
   border-bottom: solid 10px var(--dark-color);
   border-radius:10px ;
+  /* filter: drop-shadow(0px 0px 10px rgb(133,61,232)); */
 }
 
+.sidebar ul li a svg {
+  filter: drop-shadow(0px 0px 10px rgb(220, 60, 139));
+}
 .sidebar ul li a  {
   transition: 0.6s;
-
-
 }
 .sidebar ul li a span {
   margin-left: 20px;
@@ -74,10 +76,15 @@
 }
 .sidebar ul li a:hover,
   .sidebar ul li a.active{
-    background-color: var(--violet-color-op) ;
+    /* background-color: var(--violet-color-op) ; */
+    box-shadow: inset 0px 5px 10px 0px rgba(133,61,232, 0.7);
     border-right: solid 8px var(--violet-color);
     
 }
+.sidebar ul li a:hover svg,
+  .sidebar ul li a.active svg{
+  color: rgb(220, 60, 139);
+  }
 @media (max-width:767px) {
   .sidebar {
     width: 90px;
@@ -141,23 +148,25 @@ header .icons img {
 .wrapper  {
   grid-template-columns: repeat(4,1fr);
   grid-template-rows: repeat(2,400px);
-  grid-template-areas: "welcome welcome box2 box2 "
-  "box3 box3 box3 box3"
-  "box4 box4 box4 box4";
+  grid-template-areas: " box2 box2 box2 box2"
+  "box1 box1 box3 box3";
 }
 
 
 @media (max-width: 992px) {
   .wrapper {
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(2,300px);
-    grid-template-areas: "welcome"
-    "box2"
+    grid-template-rows: repeat(3,300px);
+    grid-template-areas: "box2"
+    "box1"
     "box3"
     "box4";
   }
-  .wrapper .box2 p {
+  .wrapper .box2 p{
     font-size: 20px;
+  }
+  .wrapper .box2 h3{
+    font-size: 40px;
   }
   .user-profile {
     grid-template-columns: 1fr !important;
@@ -168,32 +177,82 @@ header .icons img {
 
 }
 
-.box1 {
-  grid-area: welcome;
-  background: linear-gradient(180deg, rgba(13,169,233,1) 0%, rgba(111,50,255,1) 95%);
-  flex-wrap: wrap;
-  overflow: hidden;
-  box-shadow: 0 0 10px black;
-}
 .box1 p,
-.box2 p {
-  color: white;
-  font-weight: bold;
-  font-size: 40px;
-  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+.box2 p{
+color: var(--yallow-color);
+font-family: "Bebas Neue", sans-serif;
+font-style: normal;
+font-size: 50px;
 }
+.box2 h3 {
 
-.box2 {
+    font-family: "Shojumaru", system-ui;
+    font-weight: bold;
+    font-style: normal;
+    font-size: 70px;
+
+}
+.box2  {
+  overflow: hidden;
   grid-area: box2;
-  background-image: url("/image/molchi.jpeg");
-  box-shadow: inset 0px -109px 98px 43px rgba(0,0,0,0.9);
+  /* background-color: transparent; */
+  background: linear-gradient(180deg, rgba(13,169,233,1) 0%, rgba(111,50,255,1) 95%);
+  /* box-shadow: inset 0px -109px 98px 43px rgba(0,0,0,0.9); */
   background-size: cover;
   background-repeat: no-repeat;
-  flex-direction: column;
   
+}
+
+.box2 img:last-child {
+  animation: raj3o1 3s ;
+
+}
+.box2 img:first-child{
+  animation: raj3o2 3s ;
+}
+@keyframes raj3o1 {
+
+  0%{
+    transform: translateX(100%);
+
+  }
+  100% {
+    transform: translateX(0);
+
+  }
+
+}
+@keyframes raj3o2 {
+
+  0%{
+    transform: translateX(-100%);
+
+  }
+  100% {
+    transform: translateX(0);
+
+  }
+
+}
+
+.box2 img,
+.box1 img,
+.box3 img{
+  max-height: 100%;
+  width: auto;
+}
+.box1 {
+  grid-area: box1;
+  box-shadow: 0 0 10px black;
+  background: linear-gradient(180deg, rgba(218,60,135,0.3477766106442577) 0%, rgba(0,0,0,0) 50%, rgba(130,57,45,0.3617822128851541) 100%);
+
 }
 .box3 {
   grid-area: box3;
+  box-shadow: 0 0 10px black;
+  /* background: linear-gradient(180deg, rgba(218,60,135,0.3477766106442577) 0%, rgba(0,0,0,0) 50%, rgba(130,57,45,0.3617822128851541) 100%); */
+ box-shadow: inset 0px -109px 98px 43px #803ce544;
+
 }
 .box4 {
   grid-area: box4;
@@ -217,14 +276,15 @@ header .icons img {
 .user-profile {
   /* background-color: var(--op-dark-color); */
   /* background-color: #151a1f68; */
-  background-image: url("/image/bg-d.png");
-  background-size: cover;
+  /* background-image: url("/image/bg-d.png"); */
+  /* background: linear-gradient(180deg, rgba(133,61,232,0.33140980113636365) 0%, rgba(0,0,0,0) 50%, rgba(95,164,246,0.3257279829545454) 100%);  grid-template-columns: repeat(4,1fr) ; */
+  box-shadow: inset 0px 5px 10px 0px rgba(133,61,232, 0.7);
+  box-shadow: inset 0px 5px 10px 0px rgba(220,60,139, 0.7);
 
-  grid-template-columns: repeat(4,1fr) ;
   grid-template-rows: 400px;
   grid-template-areas: "profile   level  level level";
   margin-top: 100px;
-  box-shadow: 0 0 10px black;
+  /* box-shadow: 0 0 10px black; */
 }
 .avatar-profile {
   grid-area: profile;
@@ -235,7 +295,6 @@ header .icons img {
   height: 200px;
   border-radius: 50%;
   border: solid 4px var( --dark-yellow-color);
-  box-shadow:0px 30px 74px 2px #00c2cb;
 
 }
 .pr-name ,

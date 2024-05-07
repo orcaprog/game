@@ -12,16 +12,17 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500&display=swap" rel="stylesheet" />
 </head>
 <body>
-
-  <div class="page d-flex  ">
-    <div class="sidebar text-center  position-relative">
-
-    <img class="img-fluid mt-0" src="image/logoor.png" alt="">
+  
+  <div class="page  d-flex  ">
+    
+    <div class="sidebar text-center  position-relative ">
+      
+      <img class="img-fluid mt-0" src="image/logoor.png" alt="">
       <ul>
         <li>
           <a class="active d-flex  p-3 align-items-center fs-5   rounded-2 mb-2 ms-3 " href="index.html" >
             <i class="fa-solid fa-house  fa-fw"></i>
-            <span>Home</span>
+            <span  >Home</span>
           </a>
         </li>
         <li>
@@ -48,16 +49,57 @@
             <span>Friends</span>
           </a>
         </li>
+
+        <li>
+          <a class=" d-flex  p-3 align-items-center fs-5 rounded-2 mb-2 ms-3  " href="tournament.html" >
+            <i class="fa-solid fa-ranking-star"></i>
+            <span>Leaderboard</span>
+          </a>
+        </li>
+
+        <li>
+          <a class=" d-flex  p-3 align-items-center fs-5 rounded-2 mb-2 ms-3  " href="tournament.html" >
+            <i class="fa-solid fa-gear"></i>
+            <span>settings</span>
+          </a>
+        </li>
+        
+ 
+
+        
       </ul>
-    </div>
-    <div class="content">
-      centent
+      <div class="position-absolute bottom-0 start-50 translate-middle-x">
+        
+        <form action="" method="post">
+          <p>
+            <button type="button" class="btn btn-secondary"><i class="fa-solid fa-right-from-bracket"></i>
+              <span> Log out</span></button>
+            </p>
+            
+          </form> 
+        </div>
+        
+      </div>
+      
+      <div class="content  ">
+        <header class="d-flex w-100  align-items-center justify-content-between  p-4">
+          <div class="search position-relative">
+            <input type="search" class="p-2  ps-5 rounded-3" placeholder="Type A Keyword">
+          </div>
+          <div class="icons d-flex align-items-center  ">
+            <span class="notf postion-relative">
+            <i class="fa-solid fa-bell fa-lg"></i>
+          </span>
+          <img src="image/avatar.png" class=" ms-3" alt="">
+        </div>
+      </header>
+      
     </div>
   </div>
-
-
-</body>
-<script src="js/bootstrap.bundle.min.js"></script>
-<script src="js/all.min.js"></script>
-
-</html>
+    
+    
+  </body>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/all.min.js"></script>
+  
+  </html>
