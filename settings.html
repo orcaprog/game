@@ -58,7 +58,7 @@
         </li>
 
         <li>
-          <a class=" d-flex  p-3 align-items-center fs-5 rounded-2 mb-2 ms-3  " href="settings.html" >
+          <a class=" d-flex  p-3 align-items-center fs-5 rounded-2 mb-2 ms-3  " href="tournament.html" >
             <i class="fa-solid fa-gear"></i>
             <span>settings</span>
           </a>
@@ -81,7 +81,7 @@
         
       </div>
 
-      <!-- START CONTENT PROFILE  -->
+      <!-- START CONTENT SETTINGS  -->
       
       <div class="content  ">
         <header class="d-flex w-100  align-items-center justify-content-between  p-4">
@@ -95,38 +95,33 @@
             <img src="image/avatar.png" class=" ms-3" alt="">
           </div>
         </header>
-        <div class="pr-welcome m-2 d-flex justify-content-between">
-          <p>  <i class="fa-solid fa-user  fa-fw"></i> Welcome,Orca </p> 
-            <div class="btn-settings">  <i class="fa-solid fa-gear"></i></div>
-        </div>
         
-        <div class="user-profile d-grid     rounded-4 ms-3 me-3 mb-2 ">
-
-          <div class="position-relative avatar-profile d-flex justify-content-around flex-wrap align-items-center">
-            <img class="position-absolute top-0 start-50 translate-middle" src="image/avatar.png" alt="">
-          
-            <div class="pr-name w-60 text-center">
-              <p  class="mt-5   text-uppercase fst-italic fw-bold" >Orca</p>
+        <div class="settings-all d-grid     rounded-4 ms-3 me-3 mt-5 ">
+            <div class="box1 d-flex justify-content-between">
+                <div class="t-sett d-flex align-items-center">
+                    <h1> Profile </h1>
+                    <i class="fa-solid fa-user  fa-fw"></i>
+                </div>
+                <form method="post" enctype="multipart/form-data" action="" class="w-75">
+                  <input type="hidden" name="csrfmiddlewaretoken" value="GYU0sljNcG5nlMU64yE3JcqxPxAyIkKpB6Az7JZoVRQygo029CfyEMtBM1BAVIqt">  
+                  <p>
+                    <input type="file" name="avatar" class="form-control-file" accept="image/*" id="id_avatar">
+                    <label for="id_avatar">Avatar:</label>
+                  </p>
+                  <p>
+                    <label for="id_bio">Bio:</label>
+                    <textarea name="bio" cols="40" rows="5" class="form-control" required="" id="id_bio">gfdgfdgfdgsdfsdsaddsf</textarea>
+                  </p>
+                  <button type="submit">Upload</button>
+                </form>
+              </div>
             </div>
-
-          </div>
-          <div class="level-profile d-flex justify-content-center  flex-column m-5">
-            <h4>Level 25</h4>    
-            <div class="progress rounded-4 position-relative overflow-visible">
-              <span class="w-25 rounded-4 "></span>
-              
-              
-              <!-- <div class=" pos-lev text-center  position-absolute top-0 start-25 translate-middle fw-bold fs-4 ">
-                <p>25EXP</p>
-                <i class="fa-solid fa-caret-up"></i>
-              </div> -->
-            </div>
-            
           </div>
         </div>
-      </div>
-      <!-- END CONTENT PROFILE  -->
-    </div>
+
+         
+              
+      <!-- END CONTENT SETTINGS  -->
     
     
   </body>
