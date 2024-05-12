@@ -362,7 +362,7 @@ font-size: 50px;
   flex-wrap: wrap;
 
 }
-.box1 div {
+.box1  .t-sett {
       border-width: 3px;
     border-style: solid;
     border-image: 
@@ -395,11 +395,9 @@ font-size: 50px;
 .settings-all  form {
   flex-wrap: wrap;
 }
-.settings-all  form  + p {
-  display: flex;
-  justify-content: space-between;
-} 
-.settings-all form input {
+
+
+.settings-all form .form-control-file {
   width: 0.1px;
 	height: 0.1px;
 	opacity: 0;
@@ -407,7 +405,6 @@ font-size: 50px;
 	z-index: -1;
 }
 .settings-all form  [for="id_avatar"] {
-  /* background-color: var(--violet-color); */
 height: fit-content;
 padding: 10px;
 font-family: "Bebas Neue", system-ui;
@@ -469,4 +466,16 @@ box-shadow: inset 0px 5px 10px 0px rgba(133,61,232, 0.7);
 .settings-all form  [for="id_avatar"]::before {
   content: "\f15b";
 }
+.settings-all form  [type="reset"]::before {
+  content: "\f0e2";
+}
+
+.form-group {
+  font-family: "Bebas Neue", system-ui;
+font-weight: bold;
+font-size: 40px;
+color: var(--yallow-color);
+}
+
+
 /* <-------------------------------------------------------------------------------THIS FOR SETTINGS  */
