@@ -103,17 +103,28 @@
                     <i class="fa-solid fa-user  fa-fw"></i>
                 </div>
                 <form method="post" enctype="multipart/form-data" action="" class="w-75">
-                  <input type="hidden" name="csrfmiddlewaretoken" value="GYU0sljNcG5nlMU64yE3JcqxPxAyIkKpB6Az7JZoVRQygo029CfyEMtBM1BAVIqt">  
-                  <p>
-                    <input type="file" name="avatar" class="form-control-file" accept="image/*" id="id_avatar">
-                    <label for="id_avatar">Avatar:</label>
-                  </p>
-                  <p>
-                    <label for="id_bio">Bio:</label>
-                    <textarea name="bio" cols="40" rows="5" class="form-control" required="" id="id_bio">gfdgfdgfdgsdfsdsaddsf</textarea>
-                  </p>
-                  <button type="submit">Upload</button>
-                </form>
+                  <input type="hidden" name="csrfmiddlewaretoken" value="Kl0zquj4vm8dew2FcrE1qCZCe94tkePeFANs1a6iciaXwQWZ3XVvopvrZDl6W3W7">  
+                  <div class="form-row">
+                      <div class="col-md-5">
+                          <div class="form-group">
+                              <label class="small mb-1">Username:</label>
+                                  <input type="text" name="username" value="sss" class="form-control" maxlength="100" required="" id="id_username">
+                              <label class="small mb-1">Email:</label>
+                                  <input type="text" name="email" value="sss@gamil.ocm" class="form-control" maxlength="320" required="" id="id_email">
+                          </div>
+                          <div class="form-group">
+                              <a href="#">Change Password</a>
+                              <hr>
+                              <label class="small mb-1">Change Avatar:</label>
+                              <input type="file" name="avatar" class="form-control-file" accept="image/*" id="id_avatar">
+                          </div>
+                          <label class="small mb-1">Bio:</label> <textarea name="bio" cols="40" rows="5" class="form-control" required="" id="id_bio"></textarea>
+                      </div>
+                  </div>
+                  <br><br>
+                  <button type="submit" class="btn btn-dark btn-lg">Save Changes</button>
+                  <button type="reset" class="btn btn-dark btn-lg">Reset</button>
+              </form>
               </div>
             </div>
           </div>
