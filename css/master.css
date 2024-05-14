@@ -177,7 +177,8 @@ header .icons img {
   
 }
 
- .box2 .btn {
+ .box2 .btn,
+ .send-request-friend .btn {
   background-color:transparent;
   letter-spacing: 2px;
   padding: 10px 20px;
@@ -187,7 +188,8 @@ header .icons img {
   transition: 1s;
 
  }
- .box2 .btn:hover {
+ .box2 .btn:hover ,
+ .send-request-friend .btn:hover {
   background-color:var(--red-color);
   letter-spacing: 2px;
   padding: 10px 20px;
@@ -367,7 +369,7 @@ font-size: 50px;
   grid-template-columns: 1f;
   grid-template-rows: repeat(3,900px);
   grid-template-areas:  "box1"
-                          "box2";
+  "box2";
 }
 .settings-all .box1 { 
   box-shadow: inset 0px 5px 10px 0px rgba(133,61,232, 0.7);
@@ -375,122 +377,188 @@ font-size: 50px;
 }
 .box1 {
   flex-wrap: wrap;
-
+  
 }
 .box1  .t-sett {
-      border-width: 3px;
-    border-style: solid;
-    border-image: 
-    linear-gradient(
-      to bottom, 
-      var(--violet-color), 
-      rgba(0, 0, 0, 0)
-      ) 1 100%;
-      padding: 10px;
+  border-width: 3px;
+  border-style: solid;
+  border-image: 
+  linear-gradient(
+    to bottom, 
+    var(--violet-color), 
+    rgba(0, 0, 0, 0)
+    ) 1 100%;
+    padding: 10px;
+  }
+  .box1 svg {
+    font-size: 40px;
+    filter: drop-shadow(0px 0px 10px rgb(220, 60, 139));
+    color: rgb(220, 60, 139);
+    
+    
+  }
+  .box1 h1 {
+    
+    font-family: "Jaro", system-ui;
+    font-weight: bold;
+    font-style: normal;
+    font-size: 70px;
+    letter-spacing: 2px;
+    color: var(--blue-color);
+    opacity: 20%;
+    text-shadow: 5px 5px 10px black;
+    
+  }
+  .settings-all  form {
+    flex-wrap: wrap;
+  }
+  
+  
+  .form-control-file {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    z-index: -1;
+  }
+  .settings-all form  [for="id_avatar"] {
+    height: fit-content;
+    padding: 10px;
+    font-family: "Bebas Neue", system-ui;
+    font-weight: bold;
+    color: var(--dark-color);
+    border-radius: 10px;
+    font-size: 40px;
+    position: relative;
+    width: 50%;
+    text-align: start;
+    color: var(--yallow-color);
+    margin-top: 20px;
+    box-shadow: inset 0px 5px 10px 0px rgba(133,61,232, 0.7);
+    
+    
+  }
+  .settings-all form .form-control {
+    background-color: transparent;
+    width: 90%;
+    border: none;
+    box-shadow: inset 0px 5px 10px 0px rgba(133,61,232, 0.7);
+    color: white;
+    padding: 20px;
+    
+    
+  }
+  .settings-all form button {
+    
+    width: 150px;
+    padding: 20px;
+    border-radius: 20px;
+    position: relative;
+    font-family: "Bebas Neue", system-ui;
+    font-weight: bold;
+    font-size: 20px;
+    background-color: var(--violet-color);
+    letter-spacing: 2px;
+    text-align: start;
+    
+  }
+  .settings-all form button:hover {
+    color: var(--yallow-color);
+  }
+  .settings-all form button::before,
+  .settings-all form  [for="id_avatar"]::before{
+    
+    font-family: "Font Awesome 6 Free";
+    content: "\f0c7";
+    font-weight: bold;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 30px;
+    filter: drop-shadow(0px 0px 10px rgb(93, 222, 57));
+    color: rgb(93, 222, 57);
+  }
+  
+  .settings-all form  [for="id_avatar"]::before {
+    content: "\f15b";
+  }
+  .settings-all form  [type="reset"]::before {
+    content: "\f0e2";
+  }
+  
+  .form-group {
+    font-family: "Bebas Neue", system-ui;
+    font-weight: bold;
+    font-size: 40px;
+    color: var(--yallow-color);
+  }
+  
+  
+  /* <-------------------------------------------------------------------------------THIS FOR SETTINGS  */
+
+
+
+  /* THIS FOR SETTINGS -------------------------------------------------------------------------------------------> */
+
+
+.send-request-friend {
+
+  width: 100%;
+  box-shadow: inset 0px 5px 10px 0px rgba(133,61,232, 0.7);
+
 }
-.box1 svg {
-  font-size: 40px;
-  filter: drop-shadow(0px 0px 10px rgb(220, 60, 139));
-  color: rgb(220, 60, 139);
 
+.send-request-friend ul {
+  grid-template-columns: repeat(auto-fill,minmax(300px ,1fr));
 
+  grid-gap: 10px; 
 }
-.box1 h1 {
 
-  font-family: "Jaro", system-ui;
-  font-weight: bold;
-  font-style: normal;
-  font-size: 70px;
-  letter-spacing: 2px;
-  color: var(--blue-color);
-  opacity: 20%;
-  text-shadow: 5px 5px 10px black;
-
-}
-.settings-all  form {
+.send-request-friend ul li {
+  box-shadow: inset 0px 5px 10px 0px rgba(46, 149, 218, 0.7);
+  padding: 20px;
+  height: 300px;
+  margin: 20px;
+  border-radius: 20px;
   flex-wrap: wrap;
 }
 
-
-.form-control-file {
-  width: 0.1px;
-	height: 0.1px;
-	opacity: 0;
-	overflow: hidden;
-	z-index: -1;
+.send-request-friend .btn {
+ font-family: "Jaro", system-ui;
+  color: var(--blue-color);
+/* GA3 DAK CHI LACKHOR KAYN FO9 FI .BOX2 .BTN */
 }
-.settings-all form  [for="id_avatar"] {
-height: fit-content;
-padding: 10px;
-font-family: "Bebas Neue", system-ui;
-font-weight: bold;
-color: var(--dark-color);
-border-radius: 10px;
-font-size: 40px;
-position: relative;
-width: 50%;
-text-align: start;
-color: var(--yallow-color);
-margin-top: 20px;
-box-shadow: inset 0px 5px 10px 0px rgba(133,61,232, 0.7);
-
-
+.box2 .btn:hover ,
+.send-request-friend .btn:hover {
+ font-family: "Jaro", system-ui;
+ background-color: green;
 }
-.settings-all form .form-control {
-  background-color: transparent;
-  width: 90%;
-  border: none;
-  box-shadow: inset 0px 5px 10px 0px rgba(133,61,232, 0.7);
-  color: white;
-  padding: 20px;
 
-
-}
-.settings-all form button {
+.send-request-friend ul li img {
+  max-height: 40%;
+  width: auto;
+  border-radius: 50%;
   
-  width: 150px;
-  padding: 20px;
-  border-radius: 20px;
-  position: relative;
-  font-family: "Bebas Neue", system-ui;
-  font-weight: bold;
-  font-size: 20px;
-  background-color: var(--violet-color);
-  letter-spacing: 2px;
-  text-align: start;
-
+  box-shadow: 0 0 10px black;
+  border: solid 10px var(--dark-color);
 }
-.settings-all form button:hover {
-  color: var(--yallow-color);
-}
-.settings-all form button::before,
-.settings-all form  [for="id_avatar"]::before{
-
-  font-family: "Font Awesome 6 Free";
-  content: "\f0c7";
-  font-weight: bold;
-  position: absolute;
-  right: 10px;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 30px;
-  filter: drop-shadow(0px 0px 10px rgb(93, 222, 57));
-  color: rgb(93, 222, 57);
-}
-
-.settings-all form  [for="id_avatar"]::before {
-  content: "\f15b";
-}
-.settings-all form  [type="reset"]::before {
-  content: "\f0e2";
-}
-
-.form-group {
-  font-family: "Bebas Neue", system-ui;
-font-weight: bold;
-font-size: 40px;
-color: var(--yallow-color);
-}
+.send-request-friend ul li p {
+  color: white;
+ font-family: "Jaro", system-ui;
+ font-weight: bold;
+ font-size: 40px;
 
 
-/* <-------------------------------------------------------------------------------THIS FOR SETTINGS  */
+ border-width: 3px;
+  border-style: solid;
+  border-image: 
+  linear-gradient(
+    to bottom, 
+    var(--violet-color), 
+    rgba(0, 0, 0, 0)
+    ) 1 100%;
+    padding: 10px;
+
+}
+  /* <-------------------------------------------------------------------------------THIS FOR FRIENDS  */
