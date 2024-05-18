@@ -379,7 +379,8 @@ font-size: 50px;
   flex-wrap: wrap;
   
 }
-.box1  .t-sett {
+.box1  .t-sett,
+.send-request-friend  .t-sett {
   border-width: 3px;
   border-style: solid;
   border-image: 
@@ -390,14 +391,16 @@ font-size: 50px;
     ) 1 100%;
     padding: 10px;
   }
-  .box1 svg {
+  .box1 svg ,
+  .send-request-friend  .t-sett svg{
     font-size: 40px;
     filter: drop-shadow(0px 0px 10px rgb(220, 60, 139));
     color: rgb(220, 60, 139);
     
     
   }
-  .box1 h1 {
+  .box1 h1,
+  .send-request-friend  .t-sett h1 {
     
     font-family: "Jaro", system-ui;
     font-weight: bold;
