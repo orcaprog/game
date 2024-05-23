@@ -55,12 +55,13 @@
   font-size: 14px;
   color:  white;
 }
-
-.sidebar img {
-  width: 150px;
+.sidebar .logo-img {
+  width: 90%;
   margin-bottom: 50px;
-  border-bottom: solid 10px var(--dark-color);
-  border-radius:10px ;
+  filter: drop-shadow(0px 0px 10px rgb(220, 60, 139));
+
+  /* border-bottom: solid 10px var(--dark-color); */
+  /* border-radius:10px ; */
   /* filter: drop-shadow(0px 0px 10px rgb(133,61,232)); */
 }
 
@@ -285,6 +286,8 @@ font-size: 50px;
 
 
 /* THIS FOR PROFILE -------------------------------------------------------------------------------------------> */
+
+
 .pr-welcome p{
   color: white;
   font-family: "Jaro", system-ui;
@@ -296,7 +299,7 @@ font-size: 50px;
 .pr-welcome  .btn-settings svg  {
   filter: drop-shadow(0px 0px 10px rgb(220, 60, 139));
   font-size: 30px;
-  color: rgb(220, 60, 139);
+  color: #dc3c8b;
   
 }
 .user-profile {
@@ -305,6 +308,9 @@ font-size: 50px;
   grid-template-rows: 400px  400px;
   grid-template-areas: "profile   level  level level";
   margin-top: 100px;
+  background-image: url("/image/e.jpg");
+  background-size: cover;
+
 }
 .avatar-profile {
   grid-area: profile;
@@ -316,19 +322,18 @@ font-size: 50px;
   border-radius: 50%;
   border: solid 4px var( --dark-yellow-color);
   box-shadow: inset 0px 5px 10px 0px black;
-
-      
-    }
-    .pr-name ,
-    .level-profile h4{
-      color: white;
-    }
-    .pr-name {
-      color: white;
-      border-bottom: solid 2px black;
-      width: 30%;
-      font-size: 20px;
-    }
+  
+}
+.pr-name ,
+.level-profile h4{
+  color: white;
+}
+.pr-name {
+  color: white;
+  border-bottom: solid 2px black;
+  width: 30%;
+  font-size: 20px;
+}
     .progress {
       background-color: rgba(0, 0, 0, 0.328);
       border: solid 1px rgba(0, 0, 0, 0.328);
@@ -346,12 +351,12 @@ font-size: 50px;
       border-left: solid 4px  var(--dark-yellow-color);
       box-shadow: 0 0 10px black;
     }
-
+    
     .pr-img svg {
       font-size: 30px;
       filter: drop-shadow(0px 0px 10px rgb(220, 60, 139));
       color: rgb(220, 60, 139);
-
+      
       border-radius: 50%;
       padding: 7px ;
       border: solid 2px black;
@@ -361,16 +366,20 @@ font-size: 50px;
       filter: drop-shadow(0px 0px 10px rgb(93, 222, 57));
       color: rgb(93, 222, 57);
     }
+    /* .bg-profile  {
+      max-width: 100%;
+      height: auto;
+    } */
     /* <-------------------------------------------------------------------------------THIS FOR PROFILE  */
     
     
-/* THIS FOR SETTINGS -------------------------------------------------------------------------------------------> */
-.settings-all {
-  grid-template-columns: 1f;
-  grid-template-rows: repeat(3,900px);
-  grid-template-areas:  "box1"
-  "box2";
-}
+    /* THIS FOR SETTINGS -------------------------------------------------------------------------------------------> */
+    .settings-all {
+      grid-template-columns: 1f;
+      grid-template-rows: repeat(3,900px);
+      grid-template-areas:  "box1"
+      "box2";
+    }
 .settings-all .box1 { 
   box-shadow: inset 0px 5px 10px 0px rgba(133,61,232, 0.7);
   box-shadow: inset 0px 5px 10px 0px rgba(220,60,139, 0.7);
@@ -565,3 +574,19 @@ font-size: 50px;
 
 }
   /* <-------------------------------------------------------------------------------THIS FOR FRIENDS  */
+  /* <-------------------------------------------------------------------------------THIS FOR requst-friend  */
+
+  .message-request {
+
+    width: 30%;
+    padding: 30px;
+    border-radius: 20px;
+    background-color: transparent;
+    box-shadow: inset 0px 5px 10px 0px rgba(133,61,232, 0.7)   ;
+    font-family: "Jaro", system-ui;
+    color: var(--blue-color);
+    margin-left: 70%;
+
+  }
+
+  /* <-------------------------------------------------------------------------------THIS FOR request-friend  */
