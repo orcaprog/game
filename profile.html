@@ -104,10 +104,10 @@
         <div class="user-profile d-grid     rounded-4 ms-3 me-3 mb-2 ">
           <div class="position-relative avatar-profile d-flex justify-content-around flex-wrap align-items-center">
             <div class="pr-img position-absolute top-0 start-50 translate-middle d-flex justify-content-center align-items-end">
-              <img  src="image/avatar.png" alt="">
-              <!-- <label for="id_avatar" class="small mb-1"><i class="fa-solid fa-pencil"></i></label>
+              <img  class="avatar"  src="image/avatar.png" alt="">
+              <label for="id_avatar" class="small mb-1"><i class="fa-solid fa-pencil"></i></label>
               <input type="file" name="avatar" class="form-control-file" accept="image/*" id="id_avatar">
-              <button type="submit" class="btn btn-dark btn-lg">Save Changes</button> -->
+              <button type="submit" class="btn btn-dark btn-lg">Save Changes</button>
             </div>
           
             <div class="pr-name w-60 text-center">
@@ -135,6 +135,18 @@
     
     
   </body>
+  <script>
+    let avatar = document.querySelector(".avatar")
+    let changeimg = document.getElementById("id_avatar").click()
+
+    avatar.onclick = function () {
+      changeimg.click()
+    } 
+    changeimg.onchange()= function () {
+      
+      
+    }
+  </script>
   <script src="js/bootstrap.bundle.min.js"></script>
   <script src="js/all.min.js"></script>
   
