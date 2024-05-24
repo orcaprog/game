@@ -104,7 +104,9 @@
         <div class="user-profile d-grid     rounded-4 ms-3 me-3 mb-2 ">
           <div class="position-relative avatar-profile d-flex justify-content-around flex-wrap align-items-center">
             <div class="pr-img position-absolute top-0 start-50 translate-middle d-flex justify-content-center align-items-end">
-              <img  class="avatar"  src="image/avatar.png" alt="">
+              <div class="image-container">
+                <img  class="avatar"  src="image/avatar.png" alt="">
+              </div>
               <label for="id_avatar" class="small mb-1"><i class="fa-solid fa-pencil"></i></label>
               <input type="file" name="avatar" class="form-control-file" accept="image/*" id="id_avatar">
               <button type="submit" class="btn btn-dark btn-lg">Save Changes</button>
@@ -137,15 +139,21 @@
   </body>
   <script>
     let avatar = document.querySelector(".avatar")
-    let changeimg = document.getElementById("id_avatar").click()
+    let changeimg = document.getElementById("id_avatar")
 
-    avatar.onclick = function () {
-      changeimg.click()
-    } 
-    changeimg.onchange()= function () {
-      
-      
-    }
+    // avatar.onclick = function () {
+    //   changeimg.click()
+    // } 
+
+
+    const imageContainer = document.querySelector('.image-container');
+    
+      imageContainer.addEventListener('mouseenter', () => {
+            avatar.style.filter = "blur(5px)";
+        });
+        imageContainer.addEventListener('mouseleave', () => {
+          avatar.style.filter = 'none';
+        });
   </script>
   <script src="js/bootstrap.bundle.min.js"></script>
   <script src="js/all.min.js"></script>
